@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-down {
+  animation: fade-in-down 0.3s ease-out;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 5s ease infinite;
+  background-size: 200% 200%;
+}
+
+.projects-swiper .swiper-pagination-bullet {
+  background: #0ea5e9;
+  opacity: 0.5;
+}
+
+.projects-swiper
+  .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #0ea5e9;
+}
+
+.projects-swiper .swiper-button-next,
+.projects-swiper .swiper-button-prev {
+  color: #0ea5e9;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.dark .projects-swiper .swiper-button-next,
+.dark .projects-swiper .swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.projects-swiper .swiper-button-next:after,
+.projects-swiper .swiper-button-prev:after {
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .projects-swiper .swiper-button-next,
+  .projects-swiper .swiper-button-prev {
+    display: none;
+  }
+}
