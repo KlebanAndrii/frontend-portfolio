@@ -49,17 +49,20 @@ const PracticalGrid = () => {
 
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col">
-      <div className="mb-3 md:mb-6 w-full md:hidden">
+      <div className="mb-6 w-full md:hidden">
         <div className="relative">
           <motion.button
             type="button"
             onClick={toggleDropdown}
             aria-haspopup="listbox"
             aria-expanded={isOpen}
-            className="flex w-full items-center justify-between rounded-xl border border-sky-400 bg-gradient-to-r from-sky-500 to-sky-700 px-4 py-2 font-medium text-white shadow-sm backdrop-blur-md transition-all"
+            className="flex w-full items-center justify-between rounded-xl border border-orange-400 bg-gradient-to-r from-orange-500 to-sky-700 px-4 py-2 text-base font-bold text-white shadow-md hover:brightness-110 transition-all"
             whileTap={{ scale: 0.98 }}
           >
-            <span>{tasks[selectedTaskIndex].title}</span>
+            <span className="flex items-center gap-2">
+              <span className="text-sm font-normal opacity-80">Select:</span>
+              <span>{tasks[selectedTaskIndex].title}</span>
+            </span>
             <FiChevronDown className="h-5 w-5" />
           </motion.button>
 
@@ -110,7 +113,7 @@ const PracticalGrid = () => {
                 onClick={() => setSelectedTaskIndex(index)}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className={`w-full rounded-xl border px-4 py-2 text-left font-medium shadow-sm backdrop-blur-md transition-all ${selectedTaskIndex === index ? "border-sky-400 bg-gradient-to-r from-sky-500 to-sky-700 text-white dark:border-sky-700" : "border-neutral-300 bg-white/30 text-gray-700 hover:bg-white/50 dark:border-neutral-700 dark:bg-neutral-800/30 dark:text-gray-200 dark:hover:bg-neutral-700/50"}`}
+                className={`w-full rounded-xl border px-4 py-2 text-left font-medium shadow-sm backdrop-blur-md transition-all ${selectedTaskIndex === index ? "border-orange-400 bg-gradient-to-r from-orange-500 to-sky-700 text-white" : "border-neutral-300 bg-white/30 text-gray-700 hover:bg-white/50 dark:border-neutral-700 dark:bg-neutral-800/30 dark:text-gray-200 dark:hover:bg-neutral-700/50"}`}
               >
                 {task.title}
               </motion.button>

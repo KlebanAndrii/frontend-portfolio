@@ -39,7 +39,7 @@ const Home = () => {
           placeholder="Search posts by title..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full pl-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 border border-neutral-300 dark:border-neutral-600 p-2 shadow-xl backdrop-blur-md dark:bg-neutral-700 dark:text-white"
+          className="w-full pl-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-sky-500 border border-neutral-300 dark:border-neutral-600 p-2 shadow-xl backdrop-blur-md bg-gray-100 dark:bg-neutral-700 dark:text-white"
         />
       </div>
 

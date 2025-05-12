@@ -20,7 +20,7 @@ const Header = () => {
       const isScrolled = scrollY > 50;
       setScrolled(isScrolled);
 
-      if (scrollY === 0) {
+      if (scrollY === 0 || isOpen) {
         setIsVisible(true);
         clearTimeout(timeoutId);
         return;
@@ -38,7 +38,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(timeoutId);
     };
-  }, []);
+  }, [isOpen]);
 
   return (
     <header>
