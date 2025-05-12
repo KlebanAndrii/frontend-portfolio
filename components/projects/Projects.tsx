@@ -86,7 +86,7 @@ const Projects = () => {
             }}
           >
             {projects.map((project, index) => (
-              <SwiperSlide key={index} className="py-8">
+              <SwiperSlide key={index} className="py-8 max-w-[480px]">
                 <ProjectCard
                   project={project}
                   index={index}

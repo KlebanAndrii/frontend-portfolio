@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { ProjectCardProps } from "@/types/project";
-import { fadeInRight, fadeInUp } from "@/utils/animation";
+import { fadeInUp } from "@/utils/animation";
 
 const ProjectCard = ({
   project,
@@ -25,7 +25,6 @@ const ProjectCard = ({
 
   return (
     <motion.article
-      {...fadeInRight()}
       className="group h-full transition-all duration-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
