@@ -29,7 +29,9 @@ const Header = () => {
       setIsVisible(true);
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
-        setIsVisible(false);
+        if (!isOpen) {
+          setIsVisible(false);
+        }
       }, 4000);
     };
 
