@@ -47,7 +47,7 @@ const Header = () => {
       <motion.nav
         aria-label="Main navigation"
         initial={{ opacity: 1, y: 0 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -20 }}
+        animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${scrolled ? "bg-white/80 shadow-lg backdrop-blur-md dark:bg-neutral-900/80" : "bg-transparent"}`}
       >
