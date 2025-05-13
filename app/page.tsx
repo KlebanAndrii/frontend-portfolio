@@ -13,7 +13,7 @@ export default function Home() {
         className="pointer-events-none fixed inset-0 opacity-10 dark:opacity-20"
         aria-hidden="true"
       >
-        <div className="h-full w-full bg-[url('/images/square.svg')] bg-no-repeat bg-center bg-fixed bg-[length:1000px_1000px] md:bg-auto"></div>
+        <div className="h-full w-full bg-[url('/images/square.svg')] bg-no-repeat bg-center"></div>
       </div>
       <Header />
       <main role="main">
