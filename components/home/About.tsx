@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import AnimatedDivider from "../common/AnimatedDivider";
+import { FaCertificate, FaExternalLinkAlt } from "react-icons/fa";
 import SkillsMarqueeIcons from "../common/SkillsMarqueeIcons";
 import SectionTitle from "../common/SectionTitle";
 import { fadeInLeft, fadeInRight, fadeInUp } from "@/utils/animation";
@@ -114,7 +115,7 @@ const About = () => {
                 {skills.map((skill, idx) => (
                   <li
                     key={idx}
-                    className="rounded-md border border-sky-300 bg-gradient-to-tr from-sky-100 via-white to-sky-50 px-3 py-1 text-xs font-semibold text-sky-700 shadow-sm dark:border-sky-800 dark:from-sky-800 dark:via-sky-950 dark:to-sky-900 dark:text-sky-300"
+                    className="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600"
                   >
                     {skill}
                   </li>
@@ -146,13 +147,15 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   role="link"
-                  className="w-full max-w-sm rounded-xl border bg-white px-4 py-2 text-left shadow-md transition hover:shadow-lg dark:bg-neutral-800"
+                  className="group w-full max-w-sm rounded-2xl border border-neutral-200 bg-white px-3 py-2 md:px-6 md:py-4 text-left shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
                 >
-                  <p className="mb-1 text-sm font-medium text-gray-800 dark:text-gray-200">
+                  <p className="mb-2 flex items-center gap-2 text-sm font-semibold text-gray-800 dark:text-gray-100">
+                    <FaCertificate className="text-yellow-500" />
                     {certificate.name}
                   </p>
-                  <span className="text-xs text-blue-600 underline dark:text-blue-400">
+                  <span className="flex items-center gap-1 text-xs text-blue-600 underline transition group-hover:text-blue-800 dark:text-blue-400 dark:group-hover:text-blue-300">
                     View certificate
+                    <FaExternalLinkAlt className="h-3 w-3" />
                   </span>
                 </Link>
               ))}

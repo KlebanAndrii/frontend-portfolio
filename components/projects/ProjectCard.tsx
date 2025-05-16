@@ -60,7 +60,7 @@ const ProjectCard = ({
                 {project.tech.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="rounded-md text-xs md:text-sm px-1 py-0.5 md:px-2 md:py-1 border border-sky-300 dark:border-sky-800 shadow-sm bg-gradient-to-tr from-sky-100 via-white to-sky-50 text-sky-900 dark:from-sky-800 dark:via-sky-950 dark:to-sky-900 dark:text-sky-300"
+                    className="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600"
                   >
                     {tech}
                   </span>

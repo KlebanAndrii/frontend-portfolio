@@ -95,7 +95,7 @@ const Hero = () => {
             Scroll Down
           </span>
           <div className="rounded-full border border-neutral-200 bg-white/40 p-2 shadow-md backdrop-blur-sm dark:border-neutral-700 dark:bg-neutral-800/40">
-            <HiChevronDown className="animate-bounce text-2xl text-sky-500" />
+            <HiChevronDown className="text-2xl text-sky-500" />
           </div>
         </motion.div>
       </motion.button>

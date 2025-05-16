@@ -1,4 +1,3 @@
-"use client";
 import { fadeInDown } from "@/utils/animation";
 import { motion } from "framer-motion";
 

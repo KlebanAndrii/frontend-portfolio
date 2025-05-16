@@ -17,7 +17,6 @@ import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import Link from "next/link";
 import { projects } from "@/data/projects";
-import { fadeInUp } from "@/utils/animation";
 import { GITHUB_URL } from "@/constants/externalLinks";
 import SectionTitle from "../common/SectionTitle";
 import AnimatedDivider from "../common/AnimatedDivider";
@@ -101,7 +100,8 @@ const Projects = () => {
         <div className="flex justify-center pb-10 md:pb-20">
           <Link href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
             <motion.button
-              {...fadeInUp()}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-sky-700 px-3 py-1.5 font-semibold text-white shadow-md transition-all duration-300 hover:from-sky-300 hover:to-sky-500 hover:text-black hover:shadow-lg md:px-6 md:py-3"
             >
               <FaGithub className="text-lg" />
