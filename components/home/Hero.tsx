@@ -72,7 +72,7 @@ const Hero = () => {
             <div className="group relative h-80 w-full overflow-hidden rounded-2xl border border-neutral-300 shadow-xl md:h-96 dark:border-neutral-700">
               <div
                 role="presentation"
-                className="absolute inset-0 bg-[url('/images/my-photo.jpg')] bg-cover bg-center transition-all duration-500 group-hover:scale-105"
+                className="absolute inset-0 bg-[url('/images/my-photo-25.jpg')] bg-cover bg-center transition-all duration-500 group-hover:scale-105"
               ></div>
               <div className="absolute inset-0 bg-gradient-to-t to-transparent dark:from-black/50"></div>
             </div>
