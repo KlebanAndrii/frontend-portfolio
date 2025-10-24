@@ -70,7 +70,7 @@ const PracticalGrid = () => {
             <ul
               role="listbox"
               aria-activedescendant={`task-${selectedTaskIndex}`}
-              className="absolute z-10 mt-1 w-full rounded-xl border border-neutral-300 bg-white/90 shadow-lg backdrop-blur-md dark:border-neutral-700 dark:bg-neutral-800/90"
+              className="absolute z-20 mt-1 w-full rounded-xl shadow-lg backdrop-blur-md border-orange-400 bg-gradient-to-r from-orange-500 to-sky-700"
             >
               {tasks.map((task, index) => (
                 <li
@@ -78,7 +78,7 @@ const PracticalGrid = () => {
                   id={`task-${index}`}
                   role="option"
                   aria-selected={selectedTaskIndex === index}
-                  className={`flex cursor-pointer items-center px-2 py-1 hover:bg-white/50 dark:hover:bg-neutral-700/50 ${selectedTaskIndex === index ? "font-medium text-sky-600 dark:text-sky-400" : "text-gray-700 dark:text-gray-200"}`}
+                  className={`flex cursor-pointer items-center px-2 py-1 hover:bg-neutral-700/10 ${selectedTaskIndex === index ? "font-medium text-white" : "text-gray-200"}`}
                 >
                   <button
                     type="button"
@@ -89,7 +89,7 @@ const PracticalGrid = () => {
                     className="flex w-full items-center"
                   >
                     {selectedTaskIndex === index && (
-                      <FiCheck className="mr-2 h-4 w-4 text-sky-600 dark:text-sky-400" />
+                      <FiCheck className="mr-2 h-4 w-4 text-white" />
                     )}
                     <span
                       className={selectedTaskIndex === index ? "ml-0" : "ml-6"}

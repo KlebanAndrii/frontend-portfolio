@@ -88,4 +88,13 @@ export const projects = [
     demoLink: "https://bejewelled-heliotrope-d6adb2.netlify.app/",
     codeLink: "https://github.com/KlebanAndrii/todo-app",
   },
+  {
+    title: "weeb",
+    description:
+      "📋 Landing page mockup using React, Vite, and Tailwind styles. Component-based approach to mockup creation, responsive design.",
+    image: "/images/projects/weeb.png",
+    tech: ["React", "Vite", "Tailwind CSS"],
+    demoLink: "https://weeb-freelancer.netlify.app/",
+    codeLink: "https://github.com/KlebanAndrii/weeb",
+  },
 ];
