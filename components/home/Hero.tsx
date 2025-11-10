@@ -5,6 +5,7 @@ import Link from "next/link";
 import { HiChevronDown } from "react-icons/hi";
 import SocialLinks from "../common/SocialIconLink";
 import { fadeInLeft, fadeInRight, fadeInUp } from "@/utils/animation";
+import Image from "next/image";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -70,11 +71,13 @@ const Hero = () => {
 
           <motion.div {...fadeInRight()} className="order-1 md:order-2">
             <div className="group relative h-80 w-full overflow-hidden rounded-2xl border border-neutral-300 shadow-xl md:h-96 dark:border-neutral-700">
-              <div
-                role="presentation"
-                className="absolute inset-0 bg-[url('/images/photo_w.JPEG')] bg-cover bg-center transition-all duration-500 group-hover:scale-105"
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-t to-transparent dark:from-black/50 from-white/30"></div>
+              <Image
+                src="/images/my-photo.jpg"
+                alt="Andrii Kleban"
+                fill
+                className="object-cover object-[center_20%] transition-all duration-500 group-hover:scale-105"
+                priority
+              />
             </div>
           </motion.div>
         </div>
