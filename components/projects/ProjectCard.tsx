@@ -30,7 +30,7 @@ const ProjectCard = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-400 bg-gray-100 shadow-xl backdrop-blur-md transition-all duration-500 hover:shadow-2xl dark:border-neutral-600 dark:bg-neutral-800">
-        <div className="relative h-48 w-full overflow-hidden">
+        <div className="relative h-62 w-full overflow-hidden">
           <Image
             src={project.image}
             alt={project.title}
@@ -41,13 +41,13 @@ const ProjectCard = ({
           />
         </div>
 
-        <div className="flex flex-grow flex-col p-3 md:p-6">
-          <div className="mb-2 text-gray-700 md:mb-4 dark:text-gray-200">
-            <h3 className="mb-1 md:mb-2 text-lg font-semibold  drop-shadow-md md:text-xl">
+        <div className="flex flex-grow flex-col p-3 lg:p-4">
+          <div className="mb-2 text-gray-700 lg:mb-4 dark:text-gray-200">
+            <h3 className="mb-1 lg:mb-2 text-lg font-semibold  drop-shadow-md lg:text-xl">
               {project.title}
             </h3>
             <div
-              className={`text-xs md:text-base max-w-none transition-all duration-300 ${isExpanded ? "max-h-96 overflow-y-auto" : "line-clamp-3"}`}
+              className={`text-xs lg:text-base max-w-none transition-all duration-300 ${isExpanded ? "max-h-96 overflow-y-auto" : "line-clamp-3"}`}
             >
               <p>{project.description}</p>
             </div>
@@ -55,7 +55,7 @@ const ProjectCard = ({
             {isExpanded && (
               <motion.div
                 {...fadeInUp()}
-                className="mt-2 flex flex-wrap gap-2 md:mt-4"
+                className="mt-2 flex flex-wrap gap-2 lg:mt-4"
               >
                 {project.tech.map((tech, idx) => (
                   <span
@@ -86,7 +86,7 @@ const ProjectCard = ({
             </button>
           </div>
 
-          <div className="flex justify-center gap-3 md:justify-between">
+          <div className="flex justify-center gap-3 lg:justify-between">
             <Link
               href={project.demoLink}
               target="_blank"
@@ -96,7 +96,7 @@ const ProjectCard = ({
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-sky-600 px-2 py-1 text-sm text-white shadow-md transition-all hover:from-sky-600 hover:to-sky-700 hover:shadow-lg md:px-4 md:py-2.5 md:text-base"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-sky-600 px-2 py-1 text-sm text-white shadow-md transition-all hover:from-sky-600 hover:to-sky-700 hover:shadow-lg lg:px-4 lg:py-2.5 lg:text-base"
               >
                 <FaExternalLinkAlt className="text-sm" />
                 <span>Live Demo</span>
@@ -111,7 +111,7 @@ const ProjectCard = ({
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 px-2 py-1 text-sm text-white shadow-md transition-all hover:from-gray-800 hover:to-gray-900 hover:shadow-lg md:px-4 md:py-2.5 md:text-base"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-gray-700 to-gray-800 px-2 py-1 text-sm text-white shadow-md transition-all hover:from-gray-800 hover:to-gray-900 hover:shadow-lg lg:px-4 lg:py-2.5 lg:text-base"
               >
                 <FaGithub className="text-sm" />
                 <span>Code</span>

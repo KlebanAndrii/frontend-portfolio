@@ -74,9 +74,9 @@ const Contact = () => {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="py-10 md:py-20"
+      className="py-10 lg:py-14"
     >
-      <div className="container mx-auto px-2 md:px-6">
+      <div className="container mx-auto px-2 lg:px-6">
         <SectionTitle
           title="📬 Contact"
           description="Have a question or want to work together? Feel free to reach out
@@ -86,16 +86,16 @@ const Contact = () => {
 
         <AnimatedDivider />
 
-        <div className="py-10 md:py-20">
-          <div className="grid gap-8 md:grid-cols-2">
+        <div className="py-10 lg:py-14">
+          <div className="grid gap-8 lg:grid-cols-2">
             <motion.div
               {...fadeInLeft()}
               aria-labelledby="contact-form-heading"
             >
-              <div className="overflow-hidden rounded-2xl border border-neutral-300 bg-white/30 p-4 shadow-xl backdrop-blur-md md:p-8 dark:border-neutral-700 dark:bg-neutral-800/30">
+              <div className="overflow-hidden rounded-2xl border border-neutral-300 bg-white/30 p-4 shadow-xl backdrop-blur-md lg:p-8 dark:border-neutral-700 dark:bg-neutral-800/30">
                 <h3
                   id="contact-form-heading"
-                  className="mb-3 md:mb-6 text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-50"
+                  className="mb-3 lg:mb-6 text-xl lg:text-2xl font-semibold text-gray-700 dark:text-gray-50"
                 >
                   Send Me a Message
                 </h3>
@@ -118,7 +118,7 @@ const Contact = () => {
 
                 <form
                   onSubmit={handleSubmit}
-                  className="flex flex-col gap-2 md:gap-4"
+                  className="flex flex-col gap-2 lg:gap-4"
                 >
                   <div className="flex flex-col">
                     <label
@@ -134,7 +134,7 @@ const Contact = () => {
                       value={formState.name}
                       onChange={handleChange}
                       placeholder="Your Name"
-                      className="rounded-xl border border-neutral-200 px-2 py-1.5 text-gray-700 shadow-inner focus:ring-2 focus:ring-sky-400 focus:outline-none md:px-4 md:py-3 dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-gray-200"
+                      className="rounded-xl border border-neutral-200 px-2 py-1.5 text-gray-700 shadow-inner focus:ring-2 focus:ring-sky-400 focus:outline-none lg:px-4 lg:py-3 dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-gray-200"
                       required
                     />
                   </div>
@@ -153,7 +153,7 @@ const Contact = () => {
                       value={formState.email}
                       onChange={handleChange}
                       placeholder="Your Email"
-                      className="rounded-xl border border-neutral-200 px-2 py-1.5 text-gray-700 shadow-inner focus:ring-2 focus:ring-sky-400 focus:outline-none md:px-4 md:py-3 dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-gray-200"
+                      className="rounded-xl border border-neutral-200 px-2 py-1.5 text-gray-700 shadow-inner focus:ring-2 focus:ring-sky-400 focus:outline-none lg:px-4 lg:py-3 dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-gray-200"
                       required
                     />
                   </div>
@@ -171,7 +171,7 @@ const Contact = () => {
                       value={formState.message}
                       onChange={handleChange}
                       placeholder="Your Message"
-                      className="h-24 md:h-36 resize-none rounded-xl border border-neutral-200 px-2 py-1.5 text-gray-700 shadow-inner focus:ring-2 focus:ring-sky-400 focus:outline-none md:px-4 md:py-3 dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-gray-200"
+                      className="h-24 lg:h-36 resize-none rounded-xl border border-neutral-200 px-2 py-1.5 text-gray-700 shadow-inner focus:ring-2 focus:ring-sky-400 focus:outline-none lg:px-4 lg:py-3 dark:border-neutral-700 dark:bg-neutral-900/50 dark:text-gray-200"
                       required
                     ></textarea>
                   </div>
@@ -181,7 +181,7 @@ const Contact = () => {
                     whileTap={{ scale: 0.98 }}
                     type="submit"
                     disabled={isSubmitting}
-                    className={`mt-2 rounded-full bg-gradient-to-r from-sky-500 to-sky-700 px-3 py-1.5 font-semibold text-white shadow-md transition-all hover:from-sky-300 hover:to-sky-500 md:px-6 md:py-3 ${
+                    className={`mt-2 rounded-full bg-gradient-to-r from-sky-500 to-sky-700 px-3 py-1.5 font-semibold text-white shadow-md transition-all hover:from-sky-300 hover:to-sky-500 lg:px-6 lg:py-3 ${
                       isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                     }`}
                   >
@@ -195,15 +195,15 @@ const Contact = () => {
               {...fadeInRight()}
               aria-labelledby="contact-info-heading"
             >
-              <div className="flex h-full flex-col overflow-hidden p-4 md:p-8 shadow-xl rounded-2xl border border-neutral-300 backdrop-blur-md bg-white/30  dark:border-neutral-700 dark:bg-neutral-800/30">
+              <div className="flex h-full flex-col overflow-hidden p-4 lg:p-8 shadow-xl rounded-2xl border border-neutral-300 backdrop-blur-md bg-white/30  dark:border-neutral-700 dark:bg-neutral-800/30">
                 <h3
                   id="contact-info-heading"
-                  className="mb-3 md:mb-6 text-xl font-semibold text-gray-700 md:text-2xl dark:text-gray-50"
+                  className="mb-3 lg:mb-6 text-xl font-semibold text-gray-700 lg:text-2xl dark:text-gray-50"
                 >
                   Connect With Me
                 </h3>
 
-                <ul className="mb-4 flex flex-col gap-6 md:mb-8">
+                <ul className="mb-4 flex flex-col gap-6 lg:mb-8">
                   <li className="flex items-center gap-4">
                     <div className="rounded-full bg-sky-100 p-3 dark:bg-sky-900/30">
                       <FaEnvelope className="text-xl text-sky-700 dark:text-sky-400" />
@@ -261,7 +261,7 @@ const Contact = () => {
                 </ul>
 
                 <div className="mt-auto">
-                  <p className="mb-4 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+                  <p className="mb-4 text-gray-600 dark:text-gray-300 text-sm lg:text-base">
                     I&apos;m currently available for freelance work and open to
                     new opportunities. Let&apos;s build something amazing
                     together!

@@ -59,12 +59,12 @@ const Header = () => {
       >
         <div className="container mx-auto flex items-center justify-between px-6 py-4">
           <Link href={"/"} aria-label="Homepage">
-            <span className="animate-gradient bg-gradient-to-r from-sky-400 via-sky-600 to-sky-800 bg-clip-text text-2xl font-extrabold text-transparent md:text-3xl">
+            <span className="animate-gradient bg-gradient-to-r from-sky-400 via-sky-600 to-sky-800 bg-clip-text text-2xl font-extrabold text-transparent lg:text-3xl">
               Andrii Kleban
             </span>
           </Link>
 
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-8 lg:flex">
             <ThemeToggle />
             {navLinks.map((link, index) => (
               <motion.div
@@ -81,7 +81,7 @@ const Header = () => {
               </motion.div>
             ))}
           </div>
-          <div className="md:hidden flex gap-4">
+          <div className="lg:hidden flex gap-4">
             <ThemeToggle />
             <button
               type="button"
@@ -103,7 +103,7 @@ const Header = () => {
         {isOpen && (
           <div
             id="mobile-menu"
-            className="mx-2 mb-4 flex flex-col items-center gap-6 rounded-2xl border border-neutral-300 bg-white/30 p-10 shadow-xl backdrop-blur-md transition-all duration-300 md:hidden dark:border-neutral-700 dark:bg-neutral-800/30"
+            className="container mx-auto flex flex-col items-center gap-6 rounded-2xl border border-neutral-300 bg-white/80 p-10 shadow-xl backdrop-blur-md transition-all duration-300 lg:hidden dark:border-neutral-700 dark:bg-neutral-900/80"
           >
             {navLinks.map((link, index) => (
               <motion.div

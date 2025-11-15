@@ -14,19 +14,19 @@ const Table = ({ amount, error }: TableProps) => {
           <tr>
             <th
               scope="col"
-              className="px-3 py-2 md:px-4 md:py-3 text-left text-xs md:text-sm font-semibold text-gray-700 dark:text-gray-100"
+              className="px-3 py-2 lg:px-4 lg:py-3 text-left text-xs lg:text-sm font-semibold text-gray-700 dark:text-gray-100"
             >
               Cryptocurrency
             </th>
             <th
               scope="col"
-              className="px-3 py-2 md:px-4 md:py-3 text-left text-xs md:text-sm font-semibold text-gray-700 dark:text-gray-100"
+              className="px-3 py-2 lg:px-4 lg:py-3 text-left text-xs lg:text-sm font-semibold text-gray-700 dark:text-gray-100"
             >
               Exchange Rate
             </th>
             <th
               scope="col"
-              className="px-3 py-2 md:px-4 md:py-3 text-left text-xs md:text-sm font-semibold text-gray-700 dark:text-gray-100"
+              className="px-3 py-2 lg:px-4 lg:py-3 text-left text-xs lg:text-sm font-semibold text-gray-700 dark:text-gray-100"
             >
               Number of Coins
             </th>
@@ -45,23 +45,23 @@ const Table = ({ amount, error }: TableProps) => {
                   {...fadeInUpExit(index * 0.1)}
                   className="border-b border-gray-200 dark:border-gray-700"
                 >
-                  <td className="p-2 md:p-4 text-xs md:text-sm text-gray-800 dark:text-gray-100">
+                  <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-800 dark:text-gray-100">
                     <div className="flex items-start gap-4">
-                      <Icon className="w-4 h-4 md:w-10 md:h-10 text-yellow-500 dark:text-yellow-400" />
+                      <Icon className="w-4 h-4 lg:w-10 lg:h-10 text-yellow-500 dark:text-yellow-400" />
                       <div>
                         <div className="font-semibold">
                           {name} ({code})
                         </div>
-                        <p className="hidden md:block text-xs text-gray-500 dark:text-gray-400">
+                        <p className="hidden lg:block text-xs text-gray-500 dark:text-gray-400">
                           {description}
                         </p>
                       </div>
                     </div>
                   </td>
-                  <td className="p-2 md:p-4 text-xs md:text-sm text-gray-600 dark:text-gray-300">
+                  <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-600 dark:text-gray-300">
                     1 USD = {rate} {code}
                   </td>
-                  <td className="p-2 md:p-4 text-xs md:text-sm text-gray-900 dark:text-white font-mono">
+                  <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900 dark:text-white font-mono">
                     {coinAmount}
                   </td>
                 </motion.tr>

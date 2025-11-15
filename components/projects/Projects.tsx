@@ -44,8 +44,8 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="overflow-hidden py-10 md:py-20">
-      <div className="container mx-auto px-2 md:px-6">
+    <section id="projects" className="overflow-hidden py-10 lg:py-14">
+      <div className="container mx-auto px-2 lg:px-6">
         <SectionTitle
           title="📔 Projects"
           description="Explore my portfolio of web development projects showcasing my
@@ -54,7 +54,7 @@ const Projects = () => {
 
         <AnimatedDivider />
 
-        <div className="relative py-8 md:py-16">
+        <div className="relative py-8 lg:py-12">
           <Swiper
             modules={[Navigation, Pagination, A11y, EffectCoverflow, Keyboard]}
             keyboard={{ enabled: true }}
@@ -85,7 +85,7 @@ const Projects = () => {
             }}
           >
             {projects.map((project, index) => (
-              <SwiperSlide key={index} className="py-8 max-w-[480px]">
+              <SwiperSlide key={project.id} className="py-8 max-w-[480px]">
                 <ProjectCard
                   project={project}
                   index={index}
@@ -97,12 +97,12 @@ const Projects = () => {
           </Swiper>
         </div>
 
-        <div className="flex justify-center pb-10 md:pb-20">
+        <div className="flex justify-center pb-10 lg:pb-14">
           <Link href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-sky-700 px-3 py-1.5 font-semibold text-white shadow-md transition-all duration-300 hover:from-sky-300 hover:to-sky-500 hover:text-black hover:shadow-lg md:px-6 md:py-3"
+              className="flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-sky-700 px-3 py-1.5 font-semibold text-white shadow-md transition-all duration-300 hover:from-sky-300 hover:to-sky-500 hover:text-black hover:shadow-lg lg:px-6 lg:py-3"
             >
               <FaGithub className="text-lg" />
               See More Projects

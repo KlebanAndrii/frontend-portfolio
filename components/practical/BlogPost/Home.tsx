@@ -31,7 +31,7 @@ const Home = () => {
   );
 
   return (
-    <motion.div {...fadeInUp()} className="mx-auto w-full max-w-md">
+    <motion.div {...fadeInUp()} className="mx-auto w-full">
       <div className="mb-4 relative">
         <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 z-10" />
         <input

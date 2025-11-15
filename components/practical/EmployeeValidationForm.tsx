@@ -62,21 +62,21 @@ const EmployeeValidationForm: React.FC = () => {
     <motion.section
       {...fadeInUp()}
       aria-labelledby="employee-validation-form"
-      className="mx-auto w-full max-w-xl rounded-2xl border border-neutral-300 bg-white/30 p-3 shadow-xl backdrop-blur-md md:p-6 dark:border-neutral-600 dark:bg-neutral-800/30"
+      className="mx-auto w-full rounded-2xl border border-neutral-300 bg-white/30 p-3 shadow-xl backdrop-blur-md lg:p-6 dark:border-neutral-600 dark:bg-neutral-800/30"
     >
-      <motion.header {...fadeInUp(0.05)} className="text-center mb-3 md:mb-6">
+      <motion.header {...fadeInUp(0.05)} className="text-center mb-3 lg:mb-6">
         <h2
           id="employee-validation-form"
-          className="text-xl md:text-2xl font-bold text-gray-700 dark:text-gray-50 mb-2"
+          className="text-xl lg:text-2xl font-bold text-gray-700 dark:text-gray-50 mb-2"
         >
           Employee Validation Form
         </h2>
-        <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
+        <p className="text-sm lg:text-base text-gray-600 dark:text-gray-300">
           Please fill in the details below
         </p>
       </motion.header>
 
-      <form onSubmit={handleSubmit} className="space-y-2 md:space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-2 lg:space-y-4">
         {formFields.map((field, index) => (
           <motion.div
             key={field.name}
@@ -85,7 +85,7 @@ const EmployeeValidationForm: React.FC = () => {
           >
             <label
               htmlFor={field.name}
-              className="block text-xs md:text-sm font-medium text-gray-700 dark:text-gray-200 mb-1"
+              className="block text-xs lg:text-sm font-medium text-gray-700 dark:text-gray-200 mb-1"
             >
               {field.label}
             </label>
@@ -99,7 +99,7 @@ const EmployeeValidationForm: React.FC = () => {
               onChange={handleChange}
               aria-invalid={!!errors[field.name]}
               required
-              className="w-full text-sm md:text-base rounded-lg border border-neutral-300 dark:border-neutral-600 bg-neutral-100 text-gray-800 px-2 py-1 md:px-4 md:py-2 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm"
+              className="w-full text-sm lg:text-base rounded-lg border border-neutral-300 dark:border-neutral-600 bg-neutral-100 text-gray-800 px-2 py-1 lg:px-4 lg:py-2 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm"
             />
             {errors[field.name] && (
               <p className="mt-2 text-sm text-red-500">{errors[field.name]}</p>
@@ -112,7 +112,7 @@ const EmployeeValidationForm: React.FC = () => {
           disabled={!isFormValid}
           whileHover={{ scale: isFormValid ? 1.02 : 1 }}
           whileTap={{ scale: isFormValid ? 0.98 : 1 }}
-          className={`w-full px-3 py-1.5 md:px-6 md:py-3 text-white text-sm font-medium rounded-lg shadow transition 
+          className={`w-full px-3 py-1.5 lg:px-6 lg:py-3 text-white text-sm font-medium rounded-lg shadow transition 
             ${
               isFormValid
                 ? "bg-sky-600 hover:bg-sky-500 dark:bg-sky-700 dark:hover:bg-sky-600"

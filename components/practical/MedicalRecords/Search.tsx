@@ -41,8 +41,8 @@ const Search = ({ setRecord, setId }: SearchProps) => {
     "Select Patient";
 
   return (
-    <div className="flex flex-col md:flex-row items-center gap-4">
-      <div className="relative w-full md:w-64">
+    <div className="flex flex-col lg:flex-row items-center gap-4">
+      <div className="relative w-full lg:w-64">
         <motion.button
           type="button"
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -93,7 +93,7 @@ const Search = ({ setRecord, setId }: SearchProps) => {
         onClick={handleShowClick}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="rounded-lg bg-sky-600 px-2 py-1 md:px-4 md:py-1.5 text-sm md:text-base text-white shadow hover:bg-sky-500 transition w-full md:w-auto"
+        className="rounded-lg bg-sky-600 px-2 py-1 lg:px-4 lg:py-1.5 text-sm lg:text-base text-white shadow hover:bg-sky-500 transition w-full lg:w-auto"
       >
         Show
       </motion.button>

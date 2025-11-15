@@ -48,8 +48,8 @@ const PracticalGrid = () => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-col">
-      <div className="mb-6 w-full md:hidden">
+    <div className="mx-auto flex w-full flex-col">
+      <div className="mb-6 w-full lg:hidden">
         <div className="relative">
           <motion.button
             type="button"
@@ -104,8 +104,8 @@ const PracticalGrid = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 md:flex-row">
-        <ul className="hidden w-full space-y-3 md:block md:w-1/4">
+      <div className="flex flex-col gap-12 lg:flex-row">
+        <ul className="hidden w-full space-y-3 lg:block lg:w-1/4">
           {tasks.map((task, index) => (
             <li key={task.title}>
               <motion.button
@@ -121,7 +121,7 @@ const PracticalGrid = () => {
           ))}
         </ul>
 
-        <div className="w-full md:w-3/4">
+        <div className="w-full lg:w-3/4">
           {tasks[selectedTaskIndex].component}
         </div>
       </div>

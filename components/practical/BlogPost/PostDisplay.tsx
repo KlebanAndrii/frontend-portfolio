@@ -34,7 +34,7 @@ const PostDisplay = ({
             <motion.article
               key={post.id}
               {...fadeSlideExit()}
-              className="mb-4 rounded-xl border border-neutral-300 backdrop-blur-md bg-white/50 p-2 md:p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800/50"
+              className="mb-4 rounded-xl border border-neutral-300 backdrop-blur-md bg-white/50 p-2 lg:p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800/50"
             >
               {editingId === post.id ? (
                 <>
@@ -83,7 +83,7 @@ const PostDisplay = ({
                       aria-label="Edit post"
                       whileHover={{ scale: 1.05 }}
                       onClick={() => startEditing(post)}
-                      className="rounded bg-yellow-500 px-4 py-1 md:py-1.5 text-white hover:bg-yellow-600"
+                      className="rounded bg-yellow-500 px-4 py-1 lg:py-1.5 text-white hover:bg-yellow-600"
                     >
                       Edit
                     </motion.button>
@@ -92,7 +92,7 @@ const PostDisplay = ({
                       aria-label="Delete post"
                       whileHover={{ scale: 1.05 }}
                       onClick={() => handleDeletePost(post.id)}
-                      className="rounded bg-red-500 px-4 py-1 md:py-1.5 text-white hover:bg-red-600"
+                      className="rounded bg-red-500 px-4 py-1 lg:py-1.5 text-white hover:bg-red-600"
                     >
                       Delete
                     </motion.button>

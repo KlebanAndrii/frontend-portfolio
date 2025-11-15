@@ -40,11 +40,11 @@ const ItemList = () => {
     <motion.section
       {...fadeInUp()}
       aria-labelledby="item-list-heading"
-      className="mx-auto w-full max-w-md rounded-2xl border border-neutral-300 bg-white/30 p-3 shadow-xl backdrop-blur-md md:p-6 dark:border-neutral-600 dark:bg-neutral-800/30"
+      className="mx-auto w-full rounded-2xl border border-neutral-300 bg-white/30 p-3 shadow-xl backdrop-blur-md lg:p-6 dark:border-neutral-600 dark:bg-neutral-800/30"
     >
       <h2
         id="item-list-heading"
-        className="mb-3 text-center text-xl md:text-2xl font-bold text-gray-700 md:mb-6 dark:text-gray-50"
+        className="mb-3 text-center text-xl lg:text-2xl font-bold text-gray-700 lg:mb-6 dark:text-gray-50"
       >
         📋 Item List
       </h2>
@@ -60,7 +60,7 @@ const ItemList = () => {
           placeholder="Enter an item"
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleAddItem()}
-          className="flex-1 rounded-lg border border-neutral-300 bg-white/70 text-gray-700 transition-all focus:ring-2 focus:ring-sky-500 focus:outline-none px-2 py-1 md:px-4 md:py-2 dark:border-neutral-600 dark:bg-neutral-700/70 dark:text-gray-100"
+          className="flex-1 rounded-lg border border-neutral-300 bg-white/70 text-gray-700 transition-all focus:ring-2 focus:ring-sky-500 focus:outline-none px-2 py-1 lg:px-4 lg:py-2 dark:border-neutral-600 dark:bg-neutral-700/70 dark:text-gray-100"
         />
 
         <motion.button
@@ -68,7 +68,7 @@ const ItemList = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={handleAddItem}
-          className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-sky-700 px-2 py-1.5 font-semibold text-white shadow-md transition-all hover:from-sky-400 hover:to-sky-600 md:px-4 md:py-3"
+          className="flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-sky-700 px-2 py-1.5 font-semibold text-white shadow-md transition-all hover:from-sky-400 hover:to-sky-600 lg:px-4 lg:py-3"
         >
           <FaPlus /> Add
         </motion.button>
@@ -81,7 +81,7 @@ const ItemList = () => {
               <motion.li
                 key={index}
                 {...fadeInUp(index * 0.1)}
-                className="flex items-center justify-between rounded-xl border border-neutral-200 bg-white/50 px-2 py-1.5 shadow-sm md:px-4 md:py-3 dark:border-neutral-600 dark:bg-neutral-700/50"
+                className="flex items-center justify-between rounded-xl border border-neutral-200 bg-white/50 px-2 py-1.5 shadow-sm lg:px-4 lg:py-3 dark:border-neutral-600 dark:bg-neutral-700/50"
               >
                 <motion.button
                   type="button"
@@ -95,10 +95,10 @@ const ItemList = () => {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    className={`flex h-4 w-4 md:h-6 md:w-6 items-center justify-center rounded-md ${item.completed ? "bg-gradient-to-r from-green-500 to-green-600" : "border-2 border-neutral-400 dark:border-neutral-500"}`}
+                    className={`flex h-4 w-4 lg:h-6 lg:w-6 items-center justify-center rounded-md ${item.completed ? "bg-gradient-to-r from-green-500 to-green-600" : "border-2 border-neutral-400 dark:border-neutral-500"}`}
                   >
                     {item.completed && (
-                      <FaCheck className="h-2 w-2 md:h-3 md:w-3 text-white" />
+                      <FaCheck className="h-2 w-2 lg:h-3 lg:w-3 text-white" />
                     )}
                   </motion.div>
                   <span
@@ -118,7 +118,7 @@ const ItemList = () => {
                   className="ml-4 rounded-lg bg-gradient-to-r from-red-500 to-red-600 p-2 text-white shadow-md transition-all hover:from-red-400 hover:to-red-500"
                   title="Delete"
                 >
-                  <FaTrash className="h-3 w-3 md:h-4 md:w-4" />
+                  <FaTrash className="h-3 w-3 lg:h-4 lg:w-4" />
                 </motion.button>
               </motion.li>
             ))}

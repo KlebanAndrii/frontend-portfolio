@@ -30,11 +30,11 @@ const ContactForm = () => {
     <motion.section
       {...fadeInUp()}
       aria-labelledby="contact-form"
-      className="mx-auto w-full max-w-xl rounded-2xl border border-neutral-300 bg-white/30 p-3 md:p-6 shadow-xl backdrop-blur-md dark:border-neutral-600 dark:bg-neutral-800/30"
+      className="mx-auto w-full rounded-2xl border border-neutral-300 bg-white/30 p-3 lg:p-6 shadow-xl backdrop-blur-md dark:border-neutral-600 dark:bg-neutral-800/30"
     >
       <h2
         id="contact-form"
-        className="mb-3 md:mb-6 text-center text-xl md:text-2xl font-bold text-gray-700 dark:text-gray-50"
+        className="mb-3 lg:mb-6 text-center text-xl lg:text-2xl font-bold text-gray-700 dark:text-gray-50"
       >
         ✉️ Contact Form
       </h2>
@@ -54,7 +54,7 @@ const ContactForm = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Name"
-          className="rounded-lg border border-neutral-300 bg-white/70 px-2 py-1 md:px-4 md:py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-sky-500 dark:border-neutral-600 dark:bg-neutral-700/70 dark:text-gray-100"
+          className="rounded-lg border border-neutral-300 bg-white/70 px-2 py-1 lg:px-4 lg:py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-sky-500 dark:border-neutral-600 dark:bg-neutral-700/70 dark:text-gray-100"
         />
         <label htmlFor="email" className="sr-only">
           Email
@@ -66,7 +66,7 @@ const ContactForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
-          className="rounded-lg border border-neutral-300 bg-white/70 px-2 py-1 md:px-4 md:py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-sky-500 dark:border-neutral-600 dark:bg-neutral-700/70 dark:text-gray-100"
+          className="rounded-lg border border-neutral-300 bg-white/70 px-2 py-1 lg:px-4 lg:py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-sky-500 dark:border-neutral-600 dark:bg-neutral-700/70 dark:text-gray-100"
         />
         <label htmlFor="message" className="sr-only">
           Message
@@ -77,14 +77,14 @@ const ContactForm = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Message"
-          className="h-32 resize-none rounded-lg border border-neutral-300 bg-white/70 px-2 py-1 md:px-4 md:py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-sky-500 dark:border-neutral-600 dark:bg-neutral-700/70 dark:text-gray-100"
+          className="h-32 resize-none rounded-lg border border-neutral-300 bg-white/70 px-2 py-1 lg:px-4 lg:py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-sky-500 dark:border-neutral-600 dark:bg-neutral-700/70 dark:text-gray-100"
         />
 
         <motion.button
           type="submit"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="mt-2 rounded-lg bg-gradient-to-r from-sky-500 to-sky-700 px-2 py-1 md:px-4 md:py-2 font-semibold text-white shadow-md transition-all hover:from-sky-400 hover:to-sky-600"
+          className="mt-2 rounded-lg bg-gradient-to-r from-sky-500 to-sky-700 px-2 py-1 lg:px-4 lg:py-2 font-semibold text-white shadow-md transition-all hover:from-sky-400 hover:to-sky-600"
         >
           Submit
         </motion.button>

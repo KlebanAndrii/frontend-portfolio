@@ -24,27 +24,27 @@ const ArticlesList = () => {
     <motion.section
       {...fadeInUp()}
       aria-labelledby="articles-list"
-      className="mx-auto w-full max-w-3xl rounded-2xl border border-neutral-300 bg-white/30 p-3 shadow-xl backdrop-blur-md md:p-6 dark:border-neutral-600 dark:bg-neutral-800/30"
+      className="mx-auto w-full rounded-2xl border border-neutral-300 bg-white/30 p-3 shadow-xl backdrop-blur-md lg:p-6 dark:border-neutral-600 dark:bg-neutral-800/30"
     >
       <h2
         id="articles-list"
-        className="mb-2 md:mb-4 text-center text-xl md:text-2xl font-bold text-gray-700 dark:text-gray-50"
+        className="mb-2 lg:mb-4 text-center text-xl lg:text-2xl font-bold text-gray-700 dark:text-gray-50"
       >
         📰 Articles
       </h2>
 
-      <div className="mb-3 md:mb-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
+      <div className="mb-3 lg:mb-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
         <label className="font-medium text-gray-600 dark:text-gray-300">
           Sort By:
         </label>
-        <fieldset aria-label="Sort articles" className="flex gap-4 md:gap-2">
+        <fieldset aria-label="Sort articles" className="flex gap-4 lg:gap-2">
           <legend className="sr-only">Sort By</legend>
           <motion.button
             type="button"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleMostUpvoted}
-            className="rounded-lg bg-sky-600 px-2 py-1 md:px-4 md:py-2 text-sm md:text-base text-white shadow hover:bg-sky-500"
+            className="rounded-lg bg-sky-600 px-2 py-1 lg:px-4 lg:py-2 text-sm lg:text-base text-white shadow hover:bg-sky-500"
           >
             Most Upvoted
           </motion.button>
@@ -53,7 +53,7 @@ const ArticlesList = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleMostRecent}
-            className="rounded-lg bg-sky-600 px-2 py-1 md:px-4 md:py-2 text-sm md:text-base text-white shadow hover:bg-sky-500"
+            className="rounded-lg bg-sky-600 px-2 py-1 lg:px-4 lg:py-2 text-sm lg:text-base text-white shadow hover:bg-sky-500"
           >
             Most Recent
           </motion.button>
@@ -68,22 +68,22 @@ const ArticlesList = () => {
           className="w-full table-auto border-collapse text-left"
         >
           <thead>
-            <tr className="border-b border-neutral-300 dark:border-neutral-600 text-xs md:text-base">
+            <tr className="border-b border-neutral-300 dark:border-neutral-600 text-xs lg:text-base">
               <th
                 scope="col"
-                className="px-2 py-1 md:px-4 md:py-2 text-gray-700 dark:text-gray-200"
+                className="px-2 py-1 lg:px-4 lg:py-2 text-gray-700 dark:text-gray-200"
               >
                 Title
               </th>
               <th
                 scope="col"
-                className="px-2 py-1 md:px-4 md:py-2 text-gray-700 dark:text-gray-200"
+                className="px-2 py-1 lg:px-4 lg:py-2 text-gray-700 dark:text-gray-200"
               >
                 Upvotes
               </th>
               <th
                 scope="col"
-                className="px-2 py-1 md:px-4 md:py-2 text-gray-700 dark:text-gray-200"
+                className="px-2 py-1 lg:px-4 lg:py-2 text-gray-700 dark:text-gray-200"
               >
                 Date
               </th>
@@ -94,15 +94,15 @@ const ArticlesList = () => {
               <motion.tr
                 key={index}
                 {...fadeInUp(index * 0.1)}
-                className="border-b border-neutral-200 dark:border-neutral-600 text-xs md:text-base"
+                className="border-b border-neutral-200 dark:border-neutral-600 text-xs lg:text-base"
               >
-                <td className="px-2 py-1 md:px-4 md:py-2 text-gray-800 dark:text-gray-100">
+                <td className="px-2 py-1 lg:px-4 lg:py-2 text-gray-800 dark:text-gray-100">
                   {article.title}
                 </td>
-                <td className="px-2 py-1 md:px-4 md:py-2  text-gray-600 dark:text-gray-300">
+                <td className="px-2 py-1 lg:px-4 lg:py-2  text-gray-600 dark:text-gray-300">
                   {article.upvotes}
                 </td>
-                <td className="px-2 py-1 md:px-4 md:py-2  text-gray-600 dark:text-gray-300">
+                <td className="px-2 py-1 lg:px-4 lg:py-2  text-gray-600 dark:text-gray-300">
                   {article.date}
                 </td>
               </motion.tr>

@@ -56,7 +56,7 @@ const SkillsMarqueeIcons = () => {
     <div
       role="region"
       aria-label="Skills icons scrolling section"
-      className="relative mx-auto w-full overflow-hidden rounded bg-gradient-to-b from-white via-neutral-100 to-white py-6 shadow-lg sm:py-8 md:w-[80%] dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900"
+      className="relative mx-auto w-full overflow-hidden rounded bg-gradient-to-b from-white via-neutral-100 to-white py-6 shadow-lg sm:py-8 lg:w-[80%] dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900"
     >
       <div className="marquee-wrapper flex whitespace-nowrap">
         <ul className="animate-marquee flex shrink-0">

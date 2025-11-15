@@ -8,8 +8,8 @@ import { fadeInUp } from "@/utils/animation";
 
 const Practical = () => {
   return (
-    <section id="practical" className="py-10 md:py-20">
-      <div className="container mx-auto px-2 md:px-6">
+    <section id="practical" className="py-10 lg:py-14">
+      <div className="container mx-auto px-2 lg:px-6">
         <SectionTitle
           title="💡 Practical"
           description="Explore interactive React components demonstrating practical
@@ -19,7 +19,7 @@ const Practical = () => {
 
         <AnimatedDivider />
 
-        <motion.div {...fadeInUp()} className="py-10 md:py-20">
+        <motion.div {...fadeInUp()} className="py-10 lg:py-14">
           <PracticalGrid />
         </motion.div>
         <AnimatedDivider />
