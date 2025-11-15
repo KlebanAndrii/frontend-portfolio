@@ -54,7 +54,7 @@ const Projects = () => {
 
         <AnimatedDivider />
 
-        <div className="relative py-8 lg:py-12">
+        <div className="relative pt-10 lg:pt-12 pb-4 lg:pb-6">
           <Swiper
             modules={[Navigation, Pagination, A11y, EffectCoverflow, Keyboard]}
             keyboard={{ enabled: true }}
@@ -76,6 +76,11 @@ const Projects = () => {
               clickable: true,
               dynamicBullets: true,
             }}
+            threshold={10}
+            touchRatio={1.2}
+            resistance={true}
+            resistanceRatio={0.5}
+            watchOverflow={true} 
             className="projects-swiper"
             breakpoints={{
               640: { slidesPerView: 1.5 },
@@ -85,7 +90,7 @@ const Projects = () => {
             }}
           >
             {projects.map((project, index) => (
-              <SwiperSlide key={project.id} className="py-8 max-w-[480px]">
+              <SwiperSlide key={project.id} className="max-w-[480px]">
                 <ProjectCard
                   project={project}
                   index={index}

@@ -67,22 +67,26 @@ body {
 
 .projects-swiper .swiper-button-next,
 .projects-swiper .swiper-button-prev {
-  color: #0ea5e9;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(4px);
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-.dark .projects-swiper .swiper-button-next,
-.dark .projects-swiper .swiper-button-prev {
-  background-color: rgba(0, 0, 0, 0.3);
+.projects-swiper .swiper-button-next:hover,
+.projects-swiper .swiper-button-prev:hover {
+  box-shadow: 0 0 10px 5px #0ea5e9;;
 }
 
 .projects-swiper .swiper-button-next:after,
 .projects-swiper .swiper-button-prev:after {
   font-size: 18px;
+}
+.projects-swiper .swiper-pagination {
+  margin-top: 30px;
+  position: relative;
 }
 
 @media (max-width: 767px) {
