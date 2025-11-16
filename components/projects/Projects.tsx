@@ -25,13 +25,19 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const [expanded, setExpanded] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
+    const checkIOS = () => {
+      setIsIOS(/iPad|iPhone|iPod/.test(navigator.userAgent));
+    };
+
     checkMobile();
+    checkIOS();
     window.addEventListener("resize", checkMobile);
 
     return () => {
@@ -76,18 +82,25 @@ const Projects = () => {
               clickable: true,
               dynamicBullets: true,
             }}
+            speed={isIOS ? 500 : 300}
             threshold={10}
-            touchRatio={1.2}
+            touchRatio={1}
             resistance={true}
             resistanceRatio={0.5}
-            watchOverflow={true} 
-            className="projects-swiper"
+            watchOverflow={true}
+            touchStartPreventDefault={false}
+            touchMoveStopPropagation={false}
+            preventInteractionOnTransition={isIOS}
+            slideToClickedSlide={false}
+            observer={true}
+            observeParents={true}
             breakpoints={{
               640: { slidesPerView: 1.5 },
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 2.5 },
               1280: { slidesPerView: 3 },
             }}
+            className="projects-swiper"
           >
             {projects.map((project, index) => (
               <SwiperSlide key={project.id} className="max-w-[480px]">
@@ -96,6 +109,7 @@ const Projects = () => {
                   index={index}
                   expanded={expanded}
                   onToggleExpand={toggleExpand}
+                  isMobile={isMobile}
                 />
               </SwiperSlide>
             ))}

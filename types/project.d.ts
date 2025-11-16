@@ -13,4 +13,5 @@ export interface ProjectCardProps {
   expanded: number | null;
   onToggleExpand: (index: number) => void;
   isActive?: boolean;
+  isMobile?: boolean;
 }

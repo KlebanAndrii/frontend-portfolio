@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
@@ -54,13 +54,51 @@ body {
   background-size: 200% 200%;
 }
 
+/* SWIPER OPTIMIZATION FOR iOS */
+.projects-swiper {
+  /* Forced GPU acceleration */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.projects-swiper .swiper-wrapper {
+  /* Smoother animations on iOS */
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.projects-swiper .swiper-slide {
+  /* GPU acceleration for each slide */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /* Browser warning about animations */
+  will-change: transform;
+}
+
+/* Turn off heavy effects on mobile */
+@media (max-width: 767px) {
+  .projects-swiper .swiper-slide {
+    /* Disable will-change after the animation is finished */
+    transition: transform 0.3s ease-out;
+  }
+
+  /* Disable backdrop-filter on mobile */
+  .projects-swiper .swiper-slide * {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
 .projects-swiper .swiper-pagination-bullet {
   background: #0ea5e9;
   opacity: 0.5;
+  /* Optimization for touch */
+  -webkit-tap-highlight-color: transparent;
 }
 
-.projects-swiper
-  .swiper-pagination-bullet-active {
+.projects-swiper .swiper-pagination-bullet-active {
   opacity: 1;
   background: #0ea5e9;
 }
@@ -73,11 +111,16 @@ body {
   width: 40px;
   height: 40px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    /* GPU acceleration */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .projects-swiper .swiper-button-next:hover,
 .projects-swiper .swiper-button-prev:hover {
-  box-shadow: 0 0 10px 5px #0ea5e9;;
+  box-shadow: 0 0 10px 5px #0ea5e9;
 }
 
 .projects-swiper .swiper-button-next:after,
@@ -93,5 +136,33 @@ body {
   .projects-swiper .swiper-button-next,
   .projects-swiper .swiper-button-prev {
     display: none;
+  }
+
+    /* Simplified pagination on mobile */
+  .projects-swiper .swiper-pagination {
+    margin-top: 20px;
+  }
+  
+  .projects-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+}
+
+
+/* Optimized for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .projects-swiper .swiper-slide {
+    /* Improved performance on iOS */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  /* Turn off complex shadows on iOS */
+  @media (max-width: 767px) {
+    .projects-swiper .swiper-slide img {
+      will-change: auto;
+    }
   }
 }
